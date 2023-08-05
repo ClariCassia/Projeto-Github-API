@@ -1,0 +1,161 @@
+body {
+  background-color: var(--secondary-color);
+  font-family: 'Kumbh Sans', sans-serif;
+  text-align: center;
+  padding-bottom: 100px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 50px 0 0;
+}
+
+.devicon-github-original {
+  font-size: 60px;
+  color: var(--base-color);
+  margin-bottom: 30px;
+}
+
+.container {
+  max-width: 960px;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto; 
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 25px 50px -12px;
+  background-color: var(--base-color);
+  border-radius: 30px;
+  padding: 30px;
+}
+
+.container header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px 0;
+}
+
+.container header h1 {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.container header #input-search {
+  width: 400px;
+  font-size: 17px;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 7px;
+  border: 1px solid var(--edge-color);
+}
+
+.container header #btn-search {
+  width: 200px;
+  font-size: 17px;
+  margin: 20px auto 0;
+  padding: 10px;
+  border-radius: 7px;
+  cursor: pointer;
+  border: 1px solid var(--edge-color);
+}
+
+.container header #btn-search:hover {
+  background-color: var(--accent-color);
+  color: var(--base-color);
+  border-color: var(--base-color);
+}
+
+.container .profile-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+}
+
+.container .profile-data .info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.container .profile-data .info .data {
+  padding: 40px;
+  width: 50%;
+}
+
+.container .profile-data .info img {
+  width: 50%;
+  border-radius: 50%;
+  border: 10px solid var(--accent-color);
+}
+
+.container .profile-data .info h1 {
+  font-size: 30px;
+  margin-bottom: 20px;  
+}
+
+.container .profile-data .info p {
+  font-size: 15px;
+  margin-top: 10px; 
+}
+
+.container .profile-data .repositories h2 {
+  margin-bottom: 30px;
+  text-align: center;
+ 
+}
+
+.container .profile-data .repositories ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+}
+
+.container .profile-data .repositories ul li a {
+  padding: 20px;
+  border: 1px solid var(--edge-color);
+  margin: 20px;
+  display: block;
+  border-radius: 7px;
+  transition: 0.3s ease-in-out;
+  text-transform: uppercase;
+ 
+}
+
+.container .profile-data .repositories ul li a:hover {
+  background-color: var(--accent-color);
+  color: var(--base-color);
+}
+
+.data-repositories {
+  margin-top: 10px; 
+}
+
+.data-repositories ul li {
+  background-color: #4B3D9F;
+  color: white;
+  margin: 5px;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.container .profile-data.hide {
+  display: none;
+}
+
+.container .profile-data .eventos {
+  -webkit-box-shadow: 5px 5px 15px 5px var(--secondary-color);
+  box-shadow: 5px 5px 15px 5px var(--secondary-color);
+  margin-top: 30PX;
+  padding: 25px;
+
+}
+
+.container .profile-data .eventos ul li {
+  margin: 10px;
+  text-align: center;
+}

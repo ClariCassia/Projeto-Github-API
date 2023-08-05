@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Esta página fornece uma experiência completa de exploração aos dados de um usuário do GitHub em uma única tela.">
+    <title>GitHub API</title>
+    <link rel="shortcut icon" href="src/image/icons8-github-32.png" type="image/x-icon">
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/variables.css">
+    <link rel="stylesheet" href="src/css/styles.css">
+    <link rel="stylesheet" href="src/css/responsive.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
+</head>
+
+<body>
+    <main>
+        <i class="devicon-github-original"></i>
+
+        <section class="container">
+            <header>
+                <h1>Buscar Usuário</h1>
+
+                <input type="text" id="input-search" placeholder="Digite o nome do usuário no GitHub">
+                <input type="button" value="Buscar" id="btn-search">
+            </header>
+            <div class="profile-data"></div>
+        </section>
+    </main>
+    <script type="module" src="src/scripts/index.js"></script>
+</body>
+
+</html>
