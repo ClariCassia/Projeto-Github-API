@@ -10,7 +10,6 @@ document.getElementById("btn-search").addEventListener("click", () => {
     getUserProfile(userName)
 })
 
-
 document.getElementById("input-search").addEventListener("keyup", (e) => {
     const userName = e.target.value;
     const key = e.which || e.keyCode;
@@ -47,8 +46,3 @@ function validEntry(userName) {
         return true
     }
 }
-
-
-
-
-
