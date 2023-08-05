@@ -11,11 +11,9 @@ const screen = {
                                         </div>
                                      </div>`;
 
-        let itemRepository = ""
-
-        user.repositories.forEach(repo => {
-            itemRepository += `<li><div class="info-repositories">
-                                    <a href="${repo.html_url}" target="_blank"><stron>${repo.name}</stron>
+        let itemRepository = user.repositories.map(repo =>
+            `<li><div class="info-repositories">
+                                    <a href="${repo.html_url}" target="_blank"><strong>${repo.name}</strong>
                                         <div class="data-repositories">
                                             <ul>
                                              <li>🍴${repo.forks}</li>
@@ -26,8 +24,8 @@ const screen = {
                                         </div>
                                     </a>
                                     </div>
-                                </li>`;
-        });
+                                </li>`
+        ).join('');
 
         this.userProfile.innerHTML += `<div class="repositories">
                                                     <h2>Repositórios</h2>
@@ -35,35 +33,42 @@ const screen = {
                              <div>`
 
         const eventosValidos = user.events.filter(event =>
-            event.type === "CreateEvent" || event.type === "PushEvent")
+            event.type === "CreateEvent" || event.type === "PushEvent"
+        );
 
         if (eventosValidos.length === 0) {
             this.userProfile.innerHTML += `<div class="eventos">
-                                                <p>Não há eventos registrados</p>          
-                                            <div>`;
-            return
+                                              <p>Não há eventos registrados</p>          
+                                           </div>`;
+            return;
         }
 
-        let itemEvent = "";
-        
-        eventosValidos.forEach(event => {
-            
+        const itemEvent = eventosValidos.map(event => {
+
             if (event.type === "CreateEvent") {
-                itemEvent += `<li> <strong>${event.repo.name}</strong> - Create: ${event.payload.ref_type} 
-                </li>`
-            } else if(event.type === "PushEvent"){
-                itemEvent += `<li> <strong>${event.repo.name} </strong> - ${event.payload.commits[0].message}  </li>`
-            }else(!event.type === "CreateEvent"|| !event.type === "PushEvent" )
+
+                const { repo, payload } = event;
+
+                return `<li><strong>${repo.name}</strong> - Create: ${payload.ref_type}</li>`;
+
+            } else if (event.type === "PushEvent") {
+
+                const { repo, payload } = event;
+
+                return `<li><strong>${repo.name}</strong> - ${payload.commits[0].message}</li>`;
+
+            } else (!event.type === "CreateEvent" || !event.type === "PushEvent")
             {
                 return
-            }            
-            
-        })        
-       
+            }
+
+        }).join('');
+
         this.userProfile.innerHTML += `<div class="eventos">
                                             <h2>Eventos</h2>
                                             <ul>${itemEvent}</ul>
-                                        <div>`
+                                         </div>`;
+
     },
 
     renderNotFound() {
