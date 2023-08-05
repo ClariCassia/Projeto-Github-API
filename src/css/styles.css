@@ -147,7 +147,7 @@ main {
   display: none;
 }
 
-.container .profile-data .eventos {
+.container .profile-data .events {
   -webkit-box-shadow: 5px 5px 15px 5px var(--secondary-color);
   box-shadow: 5px 5px 15px 5px var(--secondary-color);
   margin-top: 30PX;
@@ -155,7 +155,7 @@ main {
 
 }
 
-.container .profile-data .eventos ul li {
+.container .profile-data .events ul li {
   margin: 10px;
   text-align: center;
 }

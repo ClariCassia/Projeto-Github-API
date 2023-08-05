@@ -11,7 +11,7 @@ const screen = {
                                         </div>
                                      </div>`;
 
-        let itemRepository = user.repositories.map(repo =>
+        let repositoryUnit = user.repositories.map(repo =>
             `<li><div class="info-repositories">
                                     <a href="${repo.html_url}" target="_blank"><strong>${repo.name}</strong>
                                         <div class="data-repositories">
@@ -29,21 +29,21 @@ const screen = {
 
         this.userProfile.innerHTML += `<div class="repositories">
                                                     <h2>Repositórios</h2>
-                                                    <ul>${itemRepository}</ul>
+                                                    <ul>${repositoryUnit}</ul>
                              <div>`
 
-        const eventosValidos = user.events.filter(event =>
+        const validEvents = user.events.filter(event =>
             event.type === "CreateEvent" || event.type === "PushEvent"
         );
 
-        if (eventosValidos.length === 0) {
-            this.userProfile.innerHTML += `<div class="eventos">
+        if (validEvents.length === 0) {
+            this.userProfile.innerHTML += `<div class="events">
                                               <p>Não há eventos registrados</p>          
                                            </div>`;
             return;
         }
 
-        const itemEvent = eventosValidos.map(event => {
+        const itemEvent = validEvents.map(event => {
 
             if (event.type === "CreateEvent") {
 
@@ -64,11 +64,10 @@ const screen = {
 
         }).join('');
 
-        this.userProfile.innerHTML += `<div class="eventos">
+        this.userProfile.innerHTML += `<div class="events">
                                             <h2>Eventos</h2>
                                             <ul>${itemEvent}</ul>
                                          </div>`;
-
     },
 
     renderNotFound() {
