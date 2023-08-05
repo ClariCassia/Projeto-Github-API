@@ -1,5 +1,11 @@
 # Projeto-Github-API
 
+## Layout ⚡
+
+<br>
+
+<img src="./src/image/gif-projeto.gif" alt="">
+
 
 ## Sobre o projeto 🚀
 
@@ -23,11 +29,7 @@ Se você quiser conferir o projeto pronto [clique aqui ](https://claricassia.git
 - CSS
 - JS
 
-## Layout ⚡
 
-<br>
-
-<img src="./src/image/gif-projeto.gif" alt="">
 
 
 
