@@ -18,7 +18,6 @@ document.getElementById("input-search").addEventListener("keyup", (e) => {
     if (btnPressionado) {
         if (validEntry(userName)) return
         getUserProfile(userName)
-
     }
 });
 
