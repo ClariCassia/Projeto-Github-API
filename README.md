@@ -25,7 +25,9 @@ Se você quiser conferir o projeto pronto [clique aqui ](https://claricassia.git
 
 ## Tecnologias utilizadas 🪄⌨️🖱️
 
- HTML - CSS - JS
+ ✅ HTML 
+ ✅ CSS 
+ ✅ JS
 
 
 
